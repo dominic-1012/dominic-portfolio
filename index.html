@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J. Dominic | Full-Stack Developer & Software Architect</title>
+    <meta name="description" content="Portfolio of J. Dominic, Full-Stack Developer specializing in Java backend development, core system design, AI/ML solutions, and technical leadership.">
+    <meta name="keywords" content="J. Dominic, Software Developer, Java, Spring Boot, React, Full-Stack, Web Developer Portfolio">
+    <meta name="author" content="J. Dominic">
+
+    <!-- OpenGraph / Social Media -->
+    <meta property="og:title" content="J. Dominic | Full-Stack Developer">
+    <meta property="og:description" content="Building the future of the web, one robust system at a time.">
+    <meta property="og:image" content="assets/images/avatar.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Top Reading / Scroll Progress Bar -->
+    <div id="scroll-progress" aria-hidden="true"></div>
+
+    <!-- Background Interactive Particle Canvas -->
+    <canvas id="particle-canvas"></canvas>
+    
+    <!-- Ambient Glowing Orbs -->
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+
+    <!-- Custom Glowing Cursor Follower -->
+    <div id="cursor-glow" aria-hidden="true"></div>
+
+    <!-- Sticky Glass Navigation Header -->
+    <header class="navbar-header" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo-brand" aria-label="J. Dominic Home">
+                <span class="logo-icon"><i class="fa-solid fa-code"></i></span>
+                <span class="logo-text">J. <span class="gradient-text">DOMINIC</span></span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="nav-links" id="nav-links">
+                <a href="#home" class="nav-item active"><i class="fa-solid fa-house"></i> Home</a>
+                <a href="#about" class="nav-item"><i class="fa-solid fa-user"></i> About</a>
+                <a href="#skills" class="nav-item"><i class="fa-solid fa-layer-group"></i> Skills</a>
+                <a href="#projects" class="nav-item"><i class="fa-solid fa-cubes"></i> Projects</a>
+                <a href="#achievements" class="nav-item"><i class="fa-solid fa-trophy"></i> Achievements</a>
+                <a href="#contact" class="nav-item"><i class="fa-solid fa-paper-plane"></i> Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Theme Toggle Button -->
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+
+                <!-- Resume Quick Modal Trigger -->
+                <button class="btn btn-outline btn-sm desktop-only" id="quick-resume-btn">
+                    <i class="fa-solid fa-file-pdf"></i> Resume
+                </button>
+
+                <!-- Mobile Hamburger Toggle -->
+                <button class="mobile-hamburger" id="hamburger-btn" aria-label="Open Navigation Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main>
+
+        <!-- HERO SECTION -->
+        <section id="home" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="badge-pill hero-badge animate-fade-in">
+                        <span class="status-dot pulsing"></span>
+                        <span>Open for Full-Stack & Backend Engineering Roles</span>
+                    </div>
+
+                    <h1 class="hero-title animate-slide-up">
+                        Hi, I'm <span class="gradient-text">J. Dominic</span>
+                    </h1>
+
+                    <h2 class="hero-subtitle animate-slide-up delay-1">
+                        <span id="typing-prefix">I am a </span>
+                        <span id="typing-text" class="gradient-text-alt">Full-Stack Developer</span>
+                        <span class="typing-cursor">|</span>
+                    </h2>
+
+                    <blockquote class="hero-quote animate-slide-up delay-2">
+                        <i class="fa-solid fa-quote-left quote-icon"></i>
+                        <span>Building the future of the web, one robust system at a time.</span>
+                    </blockquote>
+
+                    <!-- CTA Buttons -->
+                    <div class="hero-cta-group animate-slide-up delay-3">
+                        <a href="#projects" class="btn btn-primary btn-glow">
+                            <i class="fa-solid fa-rocket"></i> View My Projects
+                        </a>
+                        <a href="#about" class="btn btn-secondary glass-btn">
+                            <i class="fa-solid fa-user-gear"></i> About Me
+                        </a>
+                        <button class="btn btn-outline resume-download-trigger">
+                            <i class="fa-solid fa-download"></i> Download Resume
+                        </button>
+                        <a href="#contact" class="btn btn-ghost">
+                            <i class="fa-solid fa-paper-plane"></i> Contact Me
+                        </a>
+                    </div>
+
+                    <!-- Micro Features List -->
+                    <div class="hero-features animate-fade-in delay-4">
+                        <div class="feature-item">
+                            <i class="fa-brands fa-java text-primary"></i> Java Backend
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-brands fa-react text-cyan"></i> React Systems
+                        </div>
+                        <div class="feature-item">
+                            <i class="fa-solid fa-brain text-purple"></i> AI / ML Solutions
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Visual / Mockup Card -->
+                <div class="hero-visual animate-fade-in">
+                    <div class="hero-card-stack">
+                        <div class="glow-backdrop"></div>
+                        <div class="developer-card glass-card">
+                            <div class="card-header-bar">
+                                <div class="dots">
+                                    <span class="dot red"></span>
+                                    <span class="dot yellow"></span>
+                                    <span class="dot green"></span>
+                                </div>
+                                <div class="tab-title"><i class="fa-solid fa-terminal"></i> dominic-system.java</div>
+                            </div>
+                            <div class="avatar-wrapper">
+                                <img src="assets/images/avatar.jpg" alt="J. Dominic Software Developer Portrait" class="hero-avatar">
+                                <div class="avatar-badge">
+                                    <i class="fa-solid fa-shield-halved"></i> 100% Code Quality
+                                </div>
+                            </div>
+                            <div class="code-snippet-box">
+                                <pre><code><span class="code-keyword">public class</span> <span class="code-class">DominicSystem</span> {
+    <span class="code-keyword">public static void</span> <span class="code-func">main</span>(String[] args) {
+        Developer dev = <span class="code-keyword">new</span> Developer(<span class="code-string">"J. Dominic"</span>);
+        dev.setCoreFocus(<span class="code-string">"Scalable Java & React Architecture"</span>);
+        dev.deployNextGenWebSystem();
+    }
+}</code></pre>
+                            </div>
+
+                            <!-- Floating Tech Badges -->
+                            <div class="floating-badge badge-1 floating-item"><i class="fa-brands fa-java"></i> Java</div>
+                            <div class="floating-badge badge-2 floating-item delay-float"><i class="fa-brands fa-react"></i> React</div>
+                            <div class="floating-badge badge-3 floating-item"><i class="fa-solid fa-server"></i> Spring Boot</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#about" class="scroll-down-indicator" aria-label="Scroll to About Section">
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </section>
+
+
+        <!-- ABOUT ME SECTION -->
+        <section id="about" class="section-padding">
+            <div class="section-container">
+                <div class="section-header text-center">
+                    <div class="badge-pill"><i class="fa-solid fa-user"></i> GET TO KNOW ME</div>
+                    <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Left: Profile & Quick Stats -->
+                    <div class="about-card-wrapper">
+                        <div class="glass-card profile-card">
+                            <div class="profile-img-container">
+                                <img src="assets/images/avatar.jpg" alt="J. Dominic Developer Profile" class="profile-img">
+                                <div class="experience-badge">
+                                    <span class="badge-num" data-count="3">3</span>+
+                                    <span class="badge-lbl">Years Coding</span>
+                                </div>
+                            </div>
+                            <div class="profile-info">
+                                <h3>J. Dominic</h3>
+                                <p class="role-text"><i class="fa-solid fa-laptop-code"></i> Full-Stack & System Developer</p>
+                                <div class="quick-tags">
+                                    <span class="tag"><i class="fa-solid fa-location-dot"></i> Available Worldwide</span>
+                                    <span class="tag"><i class="fa-solid fa-graduation-cap"></i> Computer Science & Tech</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mini Stats Grid -->
+                        <div class="mini-stats-grid">
+                            <div class="glass-card mini-stat">
+                                <div class="stat-icon"><i class="fa-solid fa-code-commit"></i></div>
+                                <div class="stat-number" data-count="10">10+</div>
+                                <div class="stat-label">Projects Built</div>
+                            </div>
+                            <div class="glass-card mini-stat">
+                                <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+                                <div class="stat-number" data-count="60">60+</div>
+                                <div class="stat-label">Participants Managed</div>
+                            </div>
+                            <div class="glass-card mini-stat">
+                                <div class="stat-icon"><i class="fa-solid fa-certificate"></i></div>
+                                <div class="stat-number" data-count="5">5+</div>
+                                <div class="stat-label">Certifications</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Bio & Experience Timeline -->
+                    <div class="about-bio-container">
+                        <div class="glass-card bio-card">
+                            <h3 class="bio-heading"><i class="fa-solid fa-compass"></i> Engineering Vision & Journey</h3>
+                            <p class="bio-text">
+                                Driven by a passion for solid software architecture and clean code, my journey centers on Java backend development, core system design, and technical project leadership. From managing team workflows in competitive hackathons to deploying live applications, I bring a practical, hands-on approach to building reliable systems. My working style is structured yet adaptable—taking end-to-end ownership from initial design to final deployment.
+                            </p>
+
+                            <div class="key-highlights">
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-circle-check highlight-icon"></i>
+                                    <div>
+                                        <strong>End-to-End Ownership:</strong> Architecting databases, designing REST endpoints, and crafting sleek client interfaces.
+                                    </div>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-circle-check highlight-icon"></i>
+                                    <div>
+                                        <strong>Leadership & Teamwork:</strong> Event head for major college ideathons, driving collaboration and strategic execution.
+                                    </div>
+                                </div>
+                                <div class="highlight-item">
+                                    <i class="fa-solid fa-circle-check highlight-icon"></i>
+                                    <div>
+                                        <strong>Analytical Mindset:</strong> Integrating AI/ML algorithms and building interactive data dashboards for smart decision-making.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Experience Timeline -->
+                        <div class="timeline-wrapper">
+                            <h3 class="timeline-title"><i class="fa-solid fa-timeline"></i> Experience & Milestones</h3>
+                            <div class="timeline">
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-date">2024 - Present</div>
+                                    <div class="timeline-content glass-card">
+                                        <h4>Full-Stack & Systems Developer</h4>
+                                        <p class="company">Independent Projects & Open Source</p>
+                                        <p>Designing scalable backend architectures with Java & Spring Boot, while building modern React dashboards and AI-integrated healthcare solutions.</p>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-date">2024</div>
+                                    <div class="timeline-content glass-card">
+                                        <h4>Event Head & Lead Organizer</h4>
+                                        <p class="company">"Think Big Start Smart" Entrepreneurship Ideathon</p>
+                                        <p>Led cross-functional teams, coordinated logistics, and managed over 60+ participants to deliver a high-impact college startup competition.</p>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-date">2023 - 2024</div>
+                                    <div class="timeline-content glass-card">
+                                        <h4>Software Engineering & Data Analytics Intern</h4>
+                                        <p class="company">Professional Technical Program</p>
+                                        <p>Demonstrated industry readiness by mastering Data Analytics, AI/ML workflows, SQL database design, and RESTful API integrations.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- SKILLS SECTION -->
+        <section id="skills" class="section-padding alt-bg">
+            <div class="section-container">
+                <div class="section-header text-center">
+                    <div class="badge-pill"><i class="fa-solid fa-microchip"></i> TECHNICAL CAPABILITIES</div>
+                    <h2 class="section-title">Skills & <span class="gradient-text">Expertise</span></h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">A comprehensive toolkit spanning backend architecture, frontend interfaces, data analytics, and modern AI engineering.</p>
+                </div>
+
+                <!-- Skill Category Filter Tabs -->
+                <div class="filter-tabs skill-tabs">
+                    <button class="tab-btn active" data-filter="all">All Skills</button>
+                    <button class="tab-btn" data-filter="backend">Backend & Databases</button>
+                    <button class="tab-btn" data-filter="frontend">Frontend & UI/UX</button>
+                    <button class="tab-btn" data-filter="tools">Tools & AI Analytics</button>
+                </div>
+
+                <!-- Skills Grid -->
+                <div class="skills-grid" id="skills-grid">
+
+                    <!-- Java -->
+                    <div class="glass-card skill-card" data-category="backend">
+                        <div class="skill-header">
+                            <div class="skill-icon java-icon"><i class="fa-brands fa-java"></i></div>
+                            <div class="skill-meta">
+                                <h3>Java</h3>
+                                <span class="skill-level">Core Backend Specialist</span>
+                            </div>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" data-progress="92%"></div>
+                        </div>
+                        <div class="skill-percentage">92%</div>
+                    </div>
+
+                    <!-- Spring Boot -->
+                    <div class="glass-card skill-card" data-category="backend">
+                        <div class="skill-header">
+                            <div class="skill-icon spring-icon"><i class="fa-solid fa-leaf"></i></div>
+                            <div class="skill-meta">
+                                <h3>Spring Boot</h3>
+                                <span class="skill-level">Microservices & APIs</span>
+                            </div>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" data-progress="88%"></div>
+                        </div>
+                        <div class="skill-percentage">88%</div>
+                    </div>
+
+                    <!-- Python -->
+                    <div class="glass-card skill-card" data-category="backend tools">
+                        <div class="skill-header">
+                            <div class="skill-icon python-icon"><i class="fa-brands fa-python"></i></div>
+                            <div class="skill-meta">
+                                <h3>Python</h3>
+                                <span class="skill-level">AI, Scripts & Data</span>
+                            </div>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" data-progress="90%"></div>
+                        </div>
+                        <div class="skill-percentage">90%</div>
+                    </div>
+
+                    <!-- JavaScript -->
+                    <div class="glass-card skill-card" data-category="frontend backend">
+                        <div class="skill-header">
+                            <div class="skill-icon js-icon"><i class="fa-brands fa-square-js"></i></div>
+                            <div class="skill-meta">
+                                <h3>JavaScript</h3>
+                                <span class="skill-level">ES6+ Modern Engine</span>
+                            </div>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" data-progress="90%"></div>
+                        </div>
+                        <div class="skill-percentage">90%</div>
+                    </div>
+
+                    <!-- React -->
+                    <div class="glass-card skill-card" data-category="frontend">
+                        <div class="skill-header">
+                            <div class="skill-icon react-icon"><i class="fa-brands fa-react"></i></div>
+                            <div class="skill-meta">
+                                <h3>React</h3>
+                                <span class="skill-level">Component UI Architecture</span>
+                            </div>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" data-progress="85%"></div>
+                        </div>
+                        <div class="skill-percentage">85%</div>
+                    </div>
+
+                    <!-- Node.js -->
+                    <div class="glass-card skill-card" data-category="backend">
+                        <div class="skill-header">
+                            <div class="skill-icon node-icon"><i class="fa-brands fa-node-js"></i></div>
+                            <div class="skill-meta">
+                                <h3>Node.js</h3>
+                                <span class="skill-level">Event-Driven Services</span>
+                            </div>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" data-progress="84%"></div>
+                        </div>
+                        <div class="skill-percentage">84%</div>
+                    </div>
+
+                    <!-- REST APIs -->
+                    <div class="glass-card skill-card" data-category="backend">
+                        <div class="skill-header">
+                            <div class="skill-icon api-icon"><i class="fa-solid fa-network-wired"></i></div>
+                            <div class="skill-meta">
+                                <h3>REST APIs</h3>
+                                <span class="skill-level">Clean Architecture</span>
+                            </div>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" data-progress="94%"></div>
+                        </div>
+                        <div class="skill-percentage">94%</div>
+                    </div>
+
+                    <!-- MySQL -->
+                    <div class="glass-card skill-card" data-category="backend">
+                        <div class="skill-header">
+                            <div class="skill-icon mysql-icon"><i class="fa-solid fa-database"></i></div>
+                            <div class="skill-meta">
+                                <h3>MySQL</h3>
+                                <span class="skill-level">Relational Data & SQL</span>
+                            </div>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" data-progress="88%"></div>
+                        </div>
+                        <div class="skill-percentage">88%</div>
+                    </div>
+
+                    <!-- MongoDB -->
+                    <div class="glass-card skill-card" data-category="backend">
+                        <div class="skill-header">
+                            <div class="skill-icon mongo-icon"><i class="fa-solid fa-envira"></i></div>
+                            <div class="skill-meta">
+                                <h3>MongoDB</h3>
+                                <span class="skill-level">NoSQL Document Store</span>
+                            </div>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" data-progress="82%"></div>
+                        </div>
+                        <div class="skill-percentage">82%</div>
+                    </div>
+
+                    <!-- HTML5 -->
+                    <div class="glass-card skill-card" data-category="frontend">
+                        <div class="skill-header">
+                            <div class="skill-icon html-icon"><i class="fa-brands fa-html5"></i></div>
+                            <div class="skill-meta">
+                                <h3>HTML5</h3>
+                                <span class="skill-level">Semantic Web Standards</span>
+                            </div>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" data-progress="95%"></div>
+                        </div>
+                        <div class="skill-percentage">95%</div>
+                    </div>
+
+                    <!-- CSS3 -->
+                    <div class="glass-card skill-card" data-category="frontend">
+                        <div class="skill-header">
+                            <div class="skill-icon css-icon"><i class="fa-brands fa-css3-alt"></i></div>
+                            <div class="skill-meta">
+                                <h3>CSS3</h3>
+                                <span class="skill-level">Animations & Glassmorphic Design</span>
+                            </div>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" data-progress="90%"></div>
+                        </div>
+                        <div class="skill-percentage">90%</div>
+                    </div>
+
+                    <!-- Git & GitHub -->
+                    <div class="glass-card skill-card" data-category="tools">
+                        <div class="skill-header">
+                            <div class="skill-icon git-icon"><i class="fa-brands fa-git-alt"></i></div>
+                            <div class="skill-meta">
+                                <h3>Git & GitHub</h3>
+                                <span class="skill-level">Version Control & CI/CD</span>
+                            </div>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" data-progress="92%"></div>
+                        </div>
+                        <div class="skill-percentage">92%</div>
+                    </div>
+
+                    <!-- Data Analytics -->
+                    <div class="glass-card skill-card" data-category="tools">
+                        <div class="skill-header">
+                            <div class="skill-icon data-icon"><i class="fa-solid fa-chart-column"></i></div>
+                            <div class="skill-meta">
+                                <h3>Data Analytics</h3>
+                                <span class="skill-level">Power BI & Insights</span>
+                            </div>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" data-progress="86%"></div>
+                        </div>
+                        <div class="skill-percentage">86%</div>
+                    </div>
+
+                    <!-- AI/ML -->
+                    <div class="glass-card skill-card" data-category="tools">
+                        <div class="skill-header">
+                            <div class="skill-icon ai-icon"><i class="fa-solid fa-robot"></i></div>
+                            <div class="skill-meta">
+                                <h3>AI / ML</h3>
+                                <span class="skill-level">Predictive Modeling</span>
+                            </div>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" data-progress="82%"></div>
+                        </div>
+                        <div class="skill-percentage">82%</div>
+                    </div>
+
+                    <!-- UI/UX -->
+                    <div class="glass-card skill-card" data-category="frontend tools">
+                        <div class="skill-header">
+                            <div class="skill-icon ui-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                            <div class="skill-meta">
+                                <h3>UI / UX Design</h3>
+                                <span class="skill-level">User Experience & Prototyping</span>
+                            </div>
+                        </div>
+                        <div class="skill-progress-bar">
+                            <div class="progress-fill" data-progress="88%"></div>
+                        </div>
+                        <div class="skill-percentage">88%</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects" class="section-padding">
+            <div class="section-container">
+                <div class="section-header text-center">
+                    <div class="badge-pill"><i class="fa-solid fa-folder-open"></i> FEATURED WORK</div>
+                    <h2 class="section-title">Crafted <span class="gradient-text">Projects</span></h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">Real-world applications combining clean backend engineering, intuitive design, and impactful results.</p>
+                </div>
+
+                <!-- Project Category Filters -->
+                <div class="filter-tabs project-tabs">
+                    <button class="tab-btn active" data-filter="all">All Projects</button>
+                    <button class="tab-btn" data-filter="ai">AI & Machine Learning</button>
+                    <button class="tab-btn" data-filter="fullstack">Full-Stack</button>
+                    <button class="tab-btn" data-filter="analytics">Data Analytics</button>
+                    <button class="tab-btn" data-filter="branding">Branding & Leadership</button>
+                </div>
+
+                <!-- Project Grid -->
+                <div class="projects-grid" id="projects-grid">
+
+                    <!-- Project 1: AI Healthcare -->
+                    <article class="glass-card project-card" data-category="ai" id="project-1">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/project-ai-healthcare.jpg" alt="AI Healthcare Diagnostics" class="project-img">
+                            <div class="project-overlay">
+                                <span class="category-badge"><i class="fa-solid fa-robot"></i> AI & Healthcare</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">AI Healthcare Diagnostics & Treatment</h3>
+                            <p class="project-desc">
+                                Developed an AI-powered healthcare solution for disease prediction and treatment recommendations, focusing on intelligent diagnosis and user-friendly design.
+                            </p>
+                            <div class="tech-badge-group">
+                                <span class="tech-badge"><i class="fa-brands fa-python"></i> Python</span>
+                                <span class="tech-badge"><i class="fa-solid fa-brain"></i> AI</span>
+                                <span class="tech-badge"><i class="fa-solid fa-robot"></i> Machine Learning</span>
+                                <span class="tech-badge"><i class="fa-solid fa-heart-pulse"></i> Healthcare</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-primary btn-sm open-modal-btn" data-modal="modal-ai-healthcare">
+                                    <i class="fa-solid fa-eye"></i> View Details
+                                </button>
+                                <a href="https://github.com/jdominic-dev/ai-healthcare-diagnostics" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                                <a href="#contact" class="btn btn-outline btn-sm demo-trigger" data-title="AI Healthcare Diagnostics">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Think Big Start Smart -->
+                    <article class="glass-card project-card" data-category="branding" id="project-2">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/project-ideathon.jpg" alt="Think Big Start Smart Ideathon" class="project-img">
+                            <div class="project-overlay">
+                                <span class="category-badge"><i class="fa-solid fa-lightbulb"></i> Ideathon & Leadership</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Think Big Start Smart (Ideathon)</h3>
+                            <p class="project-desc">
+                                Led and organized a college entrepreneurship event, managing planning, coordination, and successful execution for over 60 participants.
+                            </p>
+                            <div class="tech-badge-group">
+                                <span class="tech-badge"><i class="fa-solid fa-users-gear"></i> Leadership</span>
+                                <span class="tech-badge"><i class="fa-solid fa-calendar-check"></i> Event Management</span>
+                                <span class="tech-badge"><i class="fa-solid fa-chart-line"></i> Entrepreneurship</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-primary btn-sm open-modal-btn" data-modal="modal-ideathon">
+                                    <i class="fa-solid fa-eye"></i> View Details
+                                </button>
+                                <a href="https://github.com/jdominic-dev/ideathon-event-management" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                                <a href="#contact" class="btn btn-outline btn-sm demo-trigger" data-title="Think Big Start Smart Ideathon">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Leema Framing Works -->
+                    <article class="glass-card project-card" data-category="branding" id="project-3">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/project-branding.jpg" alt="Leema Framing Works Branding" class="project-img">
+                            <div class="project-overlay">
+                                <span class="category-badge"><i class="fa-solid fa-palette"></i> Branding & Marketing</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Leema Framing Works Branding</h3>
+                            <p class="project-desc">
+                                Created digital branding, promotional designs, and marketing content to strengthen the business's online presence.
+                            </p>
+                            <div class="tech-badge-group">
+                                <span class="tech-badge"><i class="fa-solid fa-pen-nib"></i> Branding</span>
+                                <span class="tech-badge"><i class="fa-solid fa-wand-magic-sparkles"></i> Canva</span>
+                                <span class="tech-badge"><i class="fa-solid fa-image"></i> Photoshop</span>
+                                <span class="tech-badge"><i class="fa-solid fa-bullhorn"></i> Marketing</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-primary btn-sm open-modal-btn" data-modal="modal-leema">
+                                    <i class="fa-solid fa-eye"></i> View Details
+                                </button>
+                                <a href="https://github.com/jdominic-dev/leema-branding-portfolio" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                                <a href="#contact" class="btn btn-outline btn-sm demo-trigger" data-title="Leema Framing Works Branding">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: E-Commerce Website -->
+                    <article class="glass-card project-card" data-category="fullstack" id="project-4">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/project-ecommerce.jpg" alt="E-Commerce Clothing Website" class="project-img">
+                            <div class="project-overlay">
+                                <span class="category-badge"><i class="fa-solid fa-cart-shopping"></i> Full-Stack App</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">E-Commerce Clothing Website</h3>
+                            <p class="project-desc">
+                                Built a responsive online shopping platform with product management, user authentication, and order processing features.
+                            </p>
+                            <div class="tech-badge-group">
+                                <span class="tech-badge"><i class="fa-brands fa-react"></i> React</span>
+                                <span class="tech-badge"><i class="fa-brands fa-node-js"></i> Node.js</span>
+                                <span class="tech-badge"><i class="fa-solid fa-database"></i> MongoDB</span>
+                                <span class="tech-badge"><i class="fa-solid fa-server"></i> Express</span>
+                                <span class="tech-badge"><i class="fa-brands fa-js"></i> JavaScript</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-primary btn-sm open-modal-btn" data-modal="modal-ecommerce">
+                                    <i class="fa-solid fa-eye"></i> View Details
+                                </button>
+                                <a href="https://github.com/jdominic-dev/react-ecommerce-clothing" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                                <a href="#contact" class="btn btn-outline btn-sm demo-trigger" data-title="E-Commerce Clothing Website">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 5: Data Analytics Dashboard -->
+                    <article class="glass-card project-card" data-category="analytics" id="project-5">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/project-analytics.jpg" alt="Data Analytics Dashboard" class="project-img">
+                            <div class="project-overlay">
+                                <span class="category-badge"><i class="fa-solid fa-chart-pie"></i> Business Intelligence</span>
+                            </div>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Data Analytics Dashboard</h3>
+                            <p class="project-desc">
+                                Analyzed datasets and created interactive dashboards to transform business data into meaningful insights.
+                            </p>
+                            <div class="tech-badge-group">
+                                <span class="tech-badge"><i class="fa-solid fa-chart-column"></i> Power BI</span>
+                                <span class="tech-badge"><i class="fa-solid fa-file-excel"></i> Excel</span>
+                                <span class="tech-badge"><i class="fa-brands fa-python"></i> Python</span>
+                                <span class="tech-badge"><i class="fa-solid fa-magnifying-glass-chart"></i> Data Analytics</span>
+                            </div>
+                            <div class="project-actions">
+                                <button class="btn btn-primary btn-sm open-modal-btn" data-modal="modal-analytics">
+                                    <i class="fa-solid fa-eye"></i> View Details
+                                </button>
+                                <a href="https://github.com/jdominic-dev/business-data-analytics-dashboard" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+                                    <i class="fa-brands fa-github"></i> GitHub
+                                </a>
+                                <a href="#contact" class="btn btn-outline btn-sm demo-trigger" data-title="Data Analytics Dashboard">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ACHIEVEMENTS & SOCIAL PROOF -->
+        <section id="achievements" class="section-padding alt-bg">
+            <div class="section-container">
+                <div class="section-header text-center">
+                    <div class="badge-pill"><i class="fa-solid fa-award"></i> RECOGNITION & LEADERSHIP</div>
+                    <h2 class="section-title">Achievements & <span class="gradient-text">Social Proof</span></h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">Milestones, certifications, and peer feedback demonstrating leadership and technical excellence.</p>
+                </div>
+
+                <!-- Animated Achievement Cards -->
+                <div class="achievements-grid">
+                    
+                    <!-- Card 1 -->
+                    <div class="glass-card achievement-card animate-on-scroll">
+                        <div class="achievement-icon-box gold-glow">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Event Head & Organizer</h3>
+                            <p>Successfully organized the <strong>"Think Big Start Smart"</strong> Entrepreneurship Ideathon as Event Head, leading coordination for 60+ participants.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="glass-card achievement-card animate-on-scroll">
+                        <div class="achievement-icon-box blue-glow">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Industry Internship Selection</h3>
+                            <p>Selected for a competitive professional software internship, demonstrating real-world development readiness and strong technical skills.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="glass-card achievement-card animate-on-scroll">
+                        <div class="achievement-icon-box purple-glow">
+                            <i class="fa-solid fa-scroll"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Certified Developer</h3>
+                            <p>Earned official certifications in <strong>Python, Java, AI/ML, and Data Analytics</strong>, proving mastery across modern tech stacks.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="glass-card achievement-card animate-on-scroll">
+                        <div class="achievement-icon-box green-glow">
+                            <i class="fa-solid fa-handshake-angle"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Active NSS Volunteer</h3>
+                            <p>Contributed actively to community service and social leadership initiatives as a dedicated National Service Scheme (NSS) volunteer.</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="glass-card achievement-card animate-on-scroll span-2-col">
+                        <div class="achievement-icon-box pink-glow">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="achievement-content">
+                            <h3>Faculty & Peer Recognition</h3>
+                            <p>Received consistently positive feedback from university faculty and peers for outstanding leadership, seamless teamwork, event management, and technical problem-solving.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Animated Counters Bar -->
+                <div class="stats-counter-banner glass-card">
+                    <div class="counter-item">
+                        <div class="counter-num" data-target="60">0</div>
+                        <div class="counter-label"><i class="fa-solid fa-users"></i> Event Participants</div>
+                    </div>
+                    <div class="counter-divider"></div>
+                    <div class="counter-item">
+                        <div class="counter-num" data-target="100">0</div>
+                        <div class="counter-label"><i class="fa-solid fa-percent"></i> Code Ownership</div>
+                    </div>
+                    <div class="counter-divider"></div>
+                    <div class="counter-item">
+                        <div class="counter-num" data-target="5">0</div>
+                        <div class="counter-label"><i class="fa-solid fa-certificate"></i> Specialized Certs</div>
+                    </div>
+                    <div class="counter-divider"></div>
+                    <div class="counter-item">
+                        <div class="counter-num" data-target="10">0</div>
+                        <div class="counter-label"><i class="fa-solid fa-code"></i> Live Projects</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="section-padding">
+            <div class="section-container">
+                <div class="section-header text-center">
+                    <div class="badge-pill"><i class="fa-solid fa-envelope-open-text"></i> GET IN TOUCH</div>
+                    <h2 class="section-title">Let's Build Something <span class="gradient-text">Great</span></h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">Have a project in mind, want to collaborate, or looking for a dedicated Full-Stack developer? Send a message!</p>
+                </div>
+
+                <div class="contact-grid">
+                    
+                    <!-- Left: Contact Details & Social Links -->
+                    <div class="contact-info-col">
+                        <div class="glass-card contact-info-card">
+                            <h3>Contact Information</h3>
+                            <p class="contact-intro">Feel free to reach out via email or directly connect through social platforms.</p>
+
+                            <div class="info-list">
+                                <a href="mailto:j.dominic.dev@gmail.com" class="info-item">
+                                    <div class="info-icon"><i class="fa-solid fa-envelope"></i></div>
+                                    <div class="info-text">
+                                        <span class="info-label">Direct Email</span>
+                                        <span class="info-val">j.dominic.dev@gmail.com</span>
+                                    </div>
+                                </a>
+
+                                <div class="info-item">
+                                    <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                    <div class="info-text">
+                                        <span class="info-label">Location</span>
+                                        <span class="info-val">India (Available for Remote Worldwide)</span>
+                                    </div>
+                                </div>
+
+                                <div class="info-item">
+                                    <div class="info-icon"><i class="fa-solid fa-clock"></i></div>
+                                    <div class="info-text">
+                                        <span class="info-label">Response Time</span>
+                                        <span class="info-val">Within 24 Hours</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="social-connect">
+                                <h4>Follow & Connect</h4>
+                                <div class="social-links-grid">
+                                    <a href="https://github.com/jdominic-dev" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub Profile">
+                                        <i class="fa-brands fa-github"></i>
+                                    </a>
+                                    <a href="https://linkedin.com/in/jdominic-dev" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn Profile">
+                                        <i class="fa-brands fa-linkedin-in"></i>
+                                    </a>
+                                    <a href="https://instagram.com/jdominic_dev" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram Profile">
+                                        <i class="fa-brands fa-instagram"></i>
+                                    </a>
+                                    <a href="mailto:j.dominic.dev@gmail.com" class="social-btn" aria-label="Send Email">
+                                        <i class="fa-solid fa-paper-plane"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="contact-cta-box">
+                                <button class="btn btn-primary w-100 resume-download-trigger">
+                                    <i class="fa-solid fa-file-arrow-down"></i> Download Resume (PDF)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Fully Functional Contact Form -->
+                    <div class="contact-form-col">
+                        <div class="glass-card contact-form-card">
+                            <h3>Send Me a Message</h3>
+                            
+                            <form id="contact-form" novalidate>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="form-name"><i class="fa-solid fa-user"></i> Your Name *</label>
+                                        <input type="text" id="form-name" name="name" placeholder="John Doe" required>
+                                        <span class="error-msg" id="name-error">Please enter your name.</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="form-email"><i class="fa-solid fa-envelope"></i> Email Address *</label>
+                                        <input type="email" id="form-email" name="email" placeholder="john@example.com" required>
+                                        <span class="error-msg" id="email-error">Please enter a valid email address.</span>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="form-subject"><i class="fa-solid fa-tag"></i> Subject *</label>
+                                    <input type="text" id="form-subject" name="subject" placeholder="Project Inquiry / Job Opportunity" required>
+                                    <span class="error-msg" id="subject-error">Please enter a subject.</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="form-message"><i class="fa-solid fa-comment-dots"></i> Message *</label>
+                                    <textarea id="form-message" name="message" rows="5" placeholder="Hi Dominic, I'd like to discuss a project..." required></textarea>
+                                    <span class="error-msg" id="message-error">Please enter your message (min 10 characters).</span>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary btn-glow w-100" id="submit-btn">
+                                        <span class="btn-text"><i class="fa-solid fa-paper-plane"></i> Send Message</span>
+                                        <span class="btn-spinner hidden"><i class="fa-solid fa-circle-notch fa-spin"></i> Sending...</span>
+                                    </button>
+                                </div>
+                            </form>
+
+                            <div id="form-toast" class="toast-notification hidden" role="alert">
+                                <i class="fa-solid fa-circle-check toast-icon"></i>
+                                <div class="toast-text">
+                                    <strong>Message Sent Successfully!</strong>
+                                    <p>Thank you for reaching out, Dominic will get back to you shortly.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#home" class="logo-brand">
+                        <span class="logo-text">J. <span class="gradient-text">DOMINIC</span></span>
+                    </a>
+                    <p class="footer-tagline">"Building the future of the web, one robust system at a time."</p>
+                </div>
+
+                <div class="footer-nav">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#achievements">Achievements</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="footer-socials">
+                    <a href="https://github.com/jdominic-dev" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://linkedin.com/in/jdominic-dev" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://instagram.com/jdominic_dev" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="mailto:j.dominic.dev@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 J. Dominic. All rights reserved.</p>
+                <button id="back-to-top" class="back-to-top-btn" aria-label="Back to Top" title="Back to Top">
+                    <i class="fa-solid fa-arrow-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- RESUME PREVIEW & DOWNLOAD MODAL -->
+    <div id="resume-modal" class="modal-backdrop hidden" role="dialog" aria-modal="true">
+        <div class="modal-container glass-card">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-file-pdf text-primary"></i> J. Dominic - Resume Preview</h3>
+                <button class="modal-close-btn" aria-label="Close Modal">&times;</button>
+            </div>
+            <div class="modal-body resume-modal-content">
+                <div class="resume-paper" id="resume-printable">
+                    <div class="resume-header">
+                        <h2>J. DOMINIC</h2>
+                        <p class="resume-subtitle">Full-Stack Developer & Software Architect</p>
+                        <p class="resume-contact-line">Email: j.dominic.dev@gmail.com | Portfolio: jdominic-dev.github.io</p>
+                    </div>
+
+                    <div class="resume-section">
+                        <h4>SUMMARY</h4>
+                        <p>Driven software developer specializing in Java backend development, Spring Boot, React, and system architecture. Experienced in technical leadership, hackathons, AI/ML integrations, and data analytics.</p>
+                    </div>
+
+                    <div class="resume-section">
+                        <h4>TECHNICAL SKILLS</h4>
+                        <p><strong>Languages:</strong> Java, Python, JavaScript (ES6+), HTML5, CSS3, SQL</p>
+                        <p><strong>Frameworks & Libraries:</strong> Spring Boot, React, Node.js, Express, REST APIs</p>
+                        <p><strong>Databases & Tools:</strong> MySQL, MongoDB, Git, GitHub, Power BI, AI/ML Toolkit</p>
+                    </div>
+
+                    <div class="resume-section">
+                        <h4>PROJECT HIGHLIGHTS</h4>
+                        <p><strong>AI Healthcare Diagnostics:</strong> Python AI predictive model for treatment recommendations.</p>
+                        <p><strong>E-Commerce Clothing Website:</strong> React + Node.js + MongoDB responsive web app.</p>
+                        <p><strong>Data Analytics Dashboard:</strong> Business intelligence reporting with Power BI and Python.</p>
+                    </div>
+
+                    <div class="resume-section">
+                        <h4>ACHIEVEMENTS & LEADERSHIP</h4>
+                        <p>• Event Head, "Think Big Start Smart" Entrepreneurship Ideathon (60+ participants)</p>
+                        <p>• Certified in Python, Java, AI/ML, and Data Analytics</p>
+                        <p>• Active NSS Volunteer & Community Service Leader</p>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="print-resume-btn">
+                    <i class="fa-solid fa-print"></i> Save / Print PDF Resume
+                </button>
+                <button class="btn btn-secondary modal-close-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- PROJECT DETAILS MODALS -->
+    
+    <!-- Project 1 Modal -->
+    <div id="modal-ai-healthcare" class="modal-backdrop hidden" role="dialog" aria-modal="true">
+        <div class="modal-container glass-card">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-robot text-purple"></i> AI Healthcare Diagnostics & Treatment</h3>
+                <button class="modal-close-btn" aria-label="Close Modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="assets/images/project-ai-healthcare.jpg" alt="AI Healthcare Diagnostics Project Detail" class="modal-img">
+                <h4>Project Overview</h4>
+                <p>An intelligent medical diagnosis system leveraging Python machine learning models to analyze patient symptoms, historical records, and diagnostic scans to recommend personalized treatment plans.</p>
+                
+                <h4>Key Features</h4>
+                <ul>
+                    <li><i class="fa-solid fa-check text-primary"></i> Machine Learning disease classification algorithms with high diagnostic confidence metrics.</li>
+                    <li><i class="fa-solid fa-check text-primary"></i> Intuitive web interface for healthcare professionals and patients.</li>
+                    <li><i class="fa-solid fa-check text-primary"></i> Secure patient data handling and RESTful API integration.</li>
+                </ul>
+
+                <h4>Technologies Used</h4>
+                <div class="tech-badge-group">
+                    <span class="tech-badge">Python</span>
+                    <span class="tech-badge">Scikit-Learn</span>
+                    <span class="tech-badge">Flask / REST API</span>
+                    <span class="tech-badge">React</span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="https://github.com/jdominic-dev/ai-healthcare-diagnostics" target="_blank" class="btn btn-primary"><i class="fa-brands fa-github"></i> View Repository</a>
+                <button class="btn btn-secondary modal-close-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 Modal -->
+    <div id="modal-ideathon" class="modal-backdrop hidden" role="dialog" aria-modal="true">
+        <div class="modal-container glass-card">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-lightbulb text-gold"></i> Think Big Start Smart (Ideathon)</h3>
+                <button class="modal-close-btn" aria-label="Close Modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="assets/images/project-ideathon.jpg" alt="Think Big Start Smart Ideathon Detail" class="modal-img">
+                <h4>Event Leadership & Execution</h4>
+                <p>As the Event Head, J. Dominic spearheaded the organization and technical logistics of the "Think Big Start Smart" entrepreneurship ideathon. The event brought together over 60 aspiring student entrepreneurs.</p>
+                
+                <h4>Key Accomplishments</h4>
+                <ul>
+                    <li><i class="fa-solid fa-check text-primary"></i> Managed event workflow, judge rubrics, venue technical setup, and time tracking.</li>
+                    <li><i class="fa-solid fa-check text-primary"></i> Mentored participant teams on pitching and rapid prototype feasibility.</li>
+                    <li><i class="fa-solid fa-check text-primary"></i> Praised by university faculty for seamless execution and leadership.</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary modal-close-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 Modal -->
+    <div id="modal-leema" class="modal-backdrop hidden" role="dialog" aria-modal="true">
+        <div class="modal-container glass-card">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-palette text-cyan"></i> Leema Framing Works Branding</h3>
+                <button class="modal-close-btn" aria-label="Close Modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="assets/images/project-branding.jpg" alt="Leema Framing Works Branding Detail" class="modal-img">
+                <h4>Brand Identity & Digital Assets</h4>
+                <p>Complete digital transformation and promotional branding overhaul for Leema Framing Works to establish a strong online identity and modern aesthetic.</p>
+                
+                <h4>Deliverables</h4>
+                <ul>
+                    <li><i class="fa-solid fa-check text-primary"></i> Modern logo design, typography guidelines, and brand color palette.</li>
+                    <li><i class="fa-solid fa-check text-primary"></i> Social media graphics, promotional banners, and marketing mockups.</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary modal-close-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 4 Modal -->
+    <div id="modal-ecommerce" class="modal-backdrop hidden" role="dialog" aria-modal="true">
+        <div class="modal-container glass-card">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-cart-shopping text-primary"></i> E-Commerce Clothing Website</h3>
+                <button class="modal-close-btn" aria-label="Close Modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="assets/images/project-ecommerce.jpg" alt="E-Commerce Website Detail" class="modal-img">
+                <h4>Full-Stack E-Commerce System</h4>
+                <p>A modern full-stack web application designed for online fashion retail, built with React, Node.js, Express, and MongoDB.</p>
+                
+                <h4>Key Features</h4>
+                <ul>
+                    <li><i class="fa-solid fa-check text-primary"></i> JWT User Authentication & Protected Account Routes.</li>
+                    <li><i class="fa-solid fa-check text-primary"></i> Dynamic Product Catalog, Category Filters, and Cart Management.</li>
+                    <li><i class="fa-solid fa-check text-primary"></i> Order checkout workflow & MongoDB database schema.</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <a href="https://github.com/jdominic-dev/react-ecommerce-clothing" target="_blank" class="btn btn-primary"><i class="fa-brands fa-github"></i> GitHub Repo</a>
+                <button class="btn btn-secondary modal-close-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 5 Modal -->
+    <div id="modal-analytics" class="modal-backdrop hidden" role="dialog" aria-modal="true">
+        <div class="modal-container glass-card">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-chart-pie text-gold"></i> Data Analytics Dashboard</h3>
+                <button class="modal-close-btn" aria-label="Close Modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <img src="assets/images/project-analytics.jpg" alt="Data Analytics Dashboard Detail" class="modal-img">
+                <h4>Business Intelligence & Analytics</h4>
+                <p>Interactive data analytics dashboard built using Power BI, Excel, and Python data science packages (Pandas, Matplotlib) to extract growth metrics from business datasets.</p>
+                
+                <h4>Key Insights</h4>
+                <ul>
+                    <li><i class="fa-solid fa-check text-primary"></i> Sales trend visualization and regional performance breakdowns.</li>
+                    <li><i class="fa-solid fa-check text-primary"></i> Automated data cleaning and ETL pipeline scripts in Python.</li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <a href="https://github.com/jdominic-dev/business-data-analytics-dashboard" target="_blank" class="btn btn-primary"><i class="fa-brands fa-github"></i> GitHub Repo</a>
+                <button class="btn btn-secondary modal-close-btn">Close</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript App Bundle -->
+    <script src="script.js"></script>
+</body>
+</html>
