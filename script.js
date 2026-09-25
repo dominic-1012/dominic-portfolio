@@ -144,6 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const typingText = document.getElementById('typing-text');
     if (typingText) {
         const titles = [
+            "Software Developer Intern",
             "Full-Stack Developer",
             "Java Backend Specialist",
             "Software Architect",
